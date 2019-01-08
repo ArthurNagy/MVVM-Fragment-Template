@@ -7,14 +7,14 @@
 
     <open file="${escapeXmlAttribute(resOut)}/layout/${escapeXmlAttribute(layoutName)}.xml" />
 
-    <instantiate from="root/src/app_package/MvvmFragment.${ktOrJavaExt}.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${className}.${ktOrJavaExt}" />
+    <instantiate from="root/src/app_package/MvvmFragment.kt.ftl"
+                   to="${escapeXmlAttribute(srcOut)}/${className}.kt" />
 
-    <open file="${escapeXmlAttribute(srcOut)}/${className}.${ktOrJavaExt}" />
+    <open file="${escapeXmlAttribute(srcOut)}/${className}.kt" />
 
-    <instantiate from="root/src/app_package/MvvmViewModel.${ktOrJavaExt}.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/${viewModelName}.${ktOrJavaExt}" />
+    <instantiate from="root/src/app_package/MvvmViewModel.kt.ftl"
+                   to="${escapeXmlAttribute(srcOut)}/${viewModelName}.kt" />
 
-    <open file="${escapeXmlAttribute(srcOut)}/${viewModelName}.${ktOrJavaExt}" />
+    <open file="${escapeXmlAttribute(srcOut)}/${viewModelName}.kt" />
 
 </recipe>

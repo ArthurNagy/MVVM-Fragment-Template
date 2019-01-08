@@ -4,20 +4,20 @@ echo "Installing MVVM Fragment Group File template..."
 
 TEMPLATES="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/"
 
-for i in $HOME/Library/Preferences/AndroidStudio* \
-         $HOME/.AndroidStudio*
+TEMPLATES_SUFFIX="plugins/android/lib/templates/other"
+
+for i in /usr/local/android-studio*/ \
+         /opt/android-studio*/ \
+         /Applications/Android*/Contents/
+
+# for i in $HOME/Library/Preferences/AndroidStudio* \
+#          $HOME/.AndroidStudio*/config
 do
     if [[ -d ${i} ]]; then
     
-    # Check if templates directory exists, if not, create it
-    TARGET_TEMPLATE = "${i}/templates/other"
-    if [[ -d ${TARGET_TEMPLATE} ]]; then
-        mkdir TARGET_TEMPLATE
-    fi
-
     # Install MVVM Fragment template
-    mkdir "${TARGET_TEMPLATE}/MVVMFragment"
-    cp -R "${TEMPLATES}/MVVMFragment"/ "${TARGET_TEMPLATE}/MVVMFragment"
+    mkdir -p $i/TEMPLATES_SUFFIX/templates/MVVMFragment
+    cp -frv "$TEMPLATES/MVVMFragment"/* $i/TEMPLATES_SUFFIX/templates/MVVMFragment
 
     fi
 done

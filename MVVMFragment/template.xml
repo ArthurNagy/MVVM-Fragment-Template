@@ -1,13 +1,11 @@
 <?xml version="1.0"?>
 <template
     format="5"
-    revision="3"
+    revision="1"
     name="MVVM Fragment"
-    description="Creates a Fragment that uses DataBinding for UI and has a ViewModel."
-    minApi="7"
-    minBuildApi="8">
-
-    <category value="Fragment" />
+    minBuildApi="21"
+    requireAndroidX="true"
+    description="Creates a Fragment that uses DataBinding for UI and has a ViewModel.">
 
     <parameter
         id="baseFragmentClassName"
